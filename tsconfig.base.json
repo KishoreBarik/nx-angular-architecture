@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-angular-architecture/app1/dashboard": [
+        "libs/app1/dashboard/src/index.ts"
+      ],
       "@nx-angular-architecture/shared/data": ["libs/shared/data/src/index.ts"],
       "@nx-angular-architecture/shared/feature/login": [
         "libs/shared/feature/login/src/index.ts"

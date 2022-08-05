@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/app1/dashboard/src",
+  "prefix": "nx-angular-architecture",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/app1/dashboard"],
+      "options": {
+        "project": "libs/app1/dashboard/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/app1/dashboard/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/app1/dashboard/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/app1/dashboard"],
+      "options": {
+        "jestConfig": "libs/app1/dashboard/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/app1/dashboard/**/*.ts",
+          "libs/app1/dashboard/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["app1:lib"]
+}
